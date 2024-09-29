@@ -16,6 +16,7 @@ public class Polynomial {
 		public Polynomial(double[] cof, int[] exp) {
 			this.cof = cof;
 			this.exp = exp;
+			simplify(this);
 		}
 
 		public Polynomial(File file) {
@@ -39,6 +40,7 @@ public class Polynomial {
 			} catch (NumberFormatException e) {
 				System.out.println("Invalid Number");
 			}
+			simplify(this);
 		}
 
 		static private Polynomial simplify(Polynomial poly) {
